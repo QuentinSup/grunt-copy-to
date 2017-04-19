@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         var mtime = stats.mtime.getTime();
         var dest = path.resolve(pair.dest);
           
-        if(grunt.file.isMatch(options.ignore, src)) {
+        if(grunt.file.isMatch(options.ignore, fullpath)) {
           grunt.verbose.writeln('Ignored ' + src.red);
           filesIgnored++;
         } else {
